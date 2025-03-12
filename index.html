@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BancoPuertollano</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+</head>
+
+<body >
+    <div id="menu">
+        
+    </div>
+    
+    <div class="campo">
+        <ul>
+           <li> <h3>Nombre: </h3></li> 
+            <li><input type="text" id="inpNombre" value="Francisco"></li>
+            <li><p id="msgNombre"></p></li>
+        </ul>
+    </div>
+    <div class="campo">
+        <ul>
+           <li> <h3>Primer Apellido: </h3></li> 
+            <li><input type="text" id="inpPApellido" value="Alia"></li>
+            <li><p id="msgPApellido"></p></li>
+        </ul>
+    </div>
+    <div class="campo">
+        <ul>
+           <li> <h3>Segundo Apellido: </h3></li> 
+            <li><input type="text" id="inpSegundoApellido" value="Hernandez" ></li>
+            <li><p id="msgSegundoApellido"></p></li>
+        </ul>
+    </div>
+    <div class="campo">
+        <ul>
+           <li> <h3>Nacionalidad: </h3></li> 
+            <li><input type="text" id="inpNacionalidad" value="Española"></li>
+            <li><p id="msgNacionalidad"></p></li>
+        </ul>
+    </div> 
+    <input type="submit" id="enviar" value="Modificar datos">   
+    <p id="msgGuardado"></p>   
+    
+    </div>
+    <script src="app.js">
+    </script>
+    <script>
+        cargarCabecera('menu')
+        cargarDatos()
+    </script>
+
+</body>
+
+</html>

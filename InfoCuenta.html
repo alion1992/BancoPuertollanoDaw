@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Cuenta</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+</head>
+<body >
+    <div id="menu">
+        
+    </div>
+
+    <div>
+        <h2>Información de la cuenta</h2>
+
+        <label for="name">IBAN:</label>
+        <input type="text" id="ibanInfo" size="28" disabled><br>
+        <br>
+        <label for="name">Saldo:</label>
+        <input type="text" id="saldoInfo" size="5" disabled><br>
+        <br>
+        <input type="text" id="retirado">
+        <button id="saldoRetirar">Retirar</button><br>
+        <br>
+        <input type="text" id="ingresado">
+        <button id="saldoIngresar">Ingresar</button>
+        <p id="msg">
+
+        </p>
+    </div>
+    <script src="infoCuenta.js"></script>
+    <script>
+        cargarCabecera('menu')
+        
+    </script>
+    <!-- <script>cargarDatos()</script> -->
+ </body>
+ </html>
