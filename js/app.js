@@ -4,12 +4,14 @@ class Usuario{
      apellido1
      apellido2
      nacionalidad
+     telefono
 
-     constructor(n,a1,a2,na){
+     constructor(n,a1,a2,na,te){
         this.nombre=n
         this.apellido1=a1
         this.apellido2=a2
         this.nacionalidad=na
+        this.telefono=te
      }
 }
 function cargarDatos(){
@@ -28,6 +30,7 @@ var nombre=document.getElementById('inpNombre')
 var primerApellido=document.getElementById('inpPApellido')
 var segundoApellido=document.getElementById('inpSegundoApellido')
 var nacionalidad=document.getElementById('inpNacionalidad')
+var telefono = document.getElementById('telefono')
 var enviar=document.getElementById('enviar')
 const expReguLetras=/^[A-Za-zñÑ]+$/
 var guardado=true
@@ -35,11 +38,11 @@ var guardado=true
 var data=localStorage.getItem('user')
 
 
-if(data!=null){
+if(data!="null"){
     var user=JSON.parse(data)
     
 }else{
-    var user=new Usuario('Francisco','Alia','Hernandez','Española')
+    var user=new Usuario('Francisco','Alia','Hernandez','Española','666666666')
 }
 
 
@@ -47,6 +50,7 @@ nombre.value=user.nombre
 primerApellido.value=user.apellido1
 segundoApellido.value=user.apellido2
 nacionalidad.value=user.nacionalidad
+telefono.value = user.telefono
 
 
 
@@ -174,7 +178,7 @@ enviar.addEventListener('click', function (event) {
     
     var mensaje=document.getElementById('msgGuardado')
     if(guardado){
-     Guardar(nombre,primerApellido,segundoApellido,nacionalidad,user)
+     Guardar(nombre,primerApellido,segundoApellido,nacionalidad,telefono,user)
      establecerUsuario(user)
      mensaje.textContent='Guardado correctamente'
      mensaje.style.color='green'
@@ -200,11 +204,12 @@ function validarTam(minimo,maximo, tamCadena) {
     return valido
 }
 
-function Guardar(n,a1,a2,na,usuario){
+function Guardar(n,a1,a2,na,te,usuario){
     usuario.nombre=n.value
     usuario.apellido1= a1.value
     usuario.apellido2=a2.value
     usuario.nacionalidad=na.value
+    usuario.telefono=te.value
 }
 
 function establecerUsuario(user){
